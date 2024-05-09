@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #0d1426;
+    --cor-segundaria:  #b4f5ff;
+    --cor-terciaria: #ffffff;
+    --cor-quadriaria: #2b4e62;
+
+    --cor-hover:  #ffffff;
+
+    --cor-fonte-principal: #b4f5ff;
+    --cor-fonte-secundaria: #ffffff;
+    --cor-fonte-terciaria: #0d1426;
+
+    --fonte-primaria: "Pixelify Sans", sans-serif;
+
+    --tamanho-fonte-paragrafo: 1.5rem;
+    --tamanho-fonte-titulo: 2rem;
+
+    /* principal: #0d1426, secundaria: #b4f5ff, terciaria: #f6f6f6 e quadriaria: #2b4e63 */
+}
+
+
+
+body {
+    /* height: 100vh; */
+    background-color: var(--cor-principal);
+}
+
+.Cabecalho {
+    padding: 1.8% 0px 1.8% 6.5%;
+    border-bottom: 1px solid var(--cor-quadriaria);
+    background: linear-gradient(135deg, #0d1426 0%, #2b4e62 100%  );
+}
+
+.Cabecalho__Menu {
+    display: flex;
+    gap: 35px;
+}
+
+.Cabecalho__Menu__Link {
+    text-decoration: none;
+    color: var(--cor-fonte-principal);
+    font-family: var(--fonte-primaria);
+    font-size: var(--tamanho-fonte-paragrafo);
+}
+
+.Cabecalho__Menu__Link:hover {
+    color: var(--cor-hover);
+    text-shadow: 1px 1px 1px black;
+    transition: 0.4s;
+}
+
+main {
+    display: flex;
+    padding: 6.5% 6.5%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8%;
+}
+
+.Apresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 85px;
+    width: 50%;
+}
+
+.Apresentacao__Titulo {
+    font-size: var(--tamanho-fonte-titulo);
+    color: var(--cor-fonte-principal);
+    font-family: var(--fonte-primaria);
+}
+
+.Apresentacao__Titulo__Destaque {
+    color: var(--cor-fonte-secundaria);
+}
+
+.Apresentacao__Texto {
+    font-size: var(--tamanho-fonte-paragrafo);
+    color: var(--cor-fonte-principal);
+    font-family: var(--fonte-primaria);
+}
+
+.Apresentacao__Botoes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.Apresentacao__Botoes__Subtitulo {
+    color: var(--cor-fonte-principal);
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: var(--tamanho-fonte-paragrafo);
+}
+
+.Apresentacao__Botoes__Link {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    text-align: center;
+    font-size: var(--tamanho-fonte-paragrafo);
+    text-decoration: none;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    color: var(--cor-fonte-principal);
+    font-family: var(--fonte-primaria);
+    border: 2px solid  var(--cor-segundaria);
+}
+
+.Apresentacao__Botoes__Link:hover {
+    background-color: var(--cor-hover);
+    color: var(--cor-fonte-terciaria);
+    transition: 0.5s;
+    border: 2px solid var(--cor-hover);
+}
+
+.Visual {
+    width: 50%;
+}
+
+.Visual__Imagem {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid var(--cor-quadriaria) ;
+}
+
+.Rodape {
+    background: linear-gradient(135deg, #0d1426 0%,  #2b4e62 100%  );
+    width: 100%;
+    padding: 1.8%;
+    text-align: center;
+    border-top: 1px solid var(--cor-quadriaria);
+}
+
+.Rodape p {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-fonte-principal);
+    font-size: var(--tamanho-fonte-paragrafo);
+}
+
+
+/* pagina Sobre Mim */
+
+.Sobremim {
+    display: flex;
+}
+
+.Apresentacao__Lista {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-fonte-principal);
+    font-size: 22px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Apresentacao__Lista__Sublista {
+    font-size: 17px;
+    color: var(--cor-fonte-principal);
+}
+
+.Apresentacao__Lista__Sublista__Link {
+    text-decoration: none;
+    color: var(--cor-fonte-secundaria);
+}
+
+.Apresentacao__Lista__Sublista__Link:hover {
+    color: var(--cor-fonte-principal);
+    transition: 0.4s;
+}
+
+/* Mobile Ajuste */
+
+@media (max-width: 1200px) {
+    main {
+        flex-direction: column-reverse;
+        padding: 6.5% 6.5%;
+    }
+
+    .Apresentacao__Titulo {
+        margin-top: 8%;
+    }
+
+    .Cabecalho {
+        background: none;
+        border: none;
+        padding: 2.8% 0px 2.8% 0px;
+    }
+
+    .Cabecalho__Menu {
+        justify-content: center;
+    }
+
+    .Cabecalho__Menu__Link {
+        font-size: 28px;
+    }
+
+    .Cabecalho__Menu__Link:hover {
+        color: var(--cor-terciaria);
+    }
+
+    .Apresentacao {
+        width: auto;
+        text-align: center;
+    }
+}
